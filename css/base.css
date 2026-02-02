@@ -37,6 +37,56 @@ body {
     font-weight: bold;
 }
 
+#cart-count {
+    background: #f4b400;
+    color: black;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 10px;
+    margin-left: 5px;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+  }
+  
+  .cart-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .cart-info {
+    flex: 1;
+  }
+  
+  .qty {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .qty button {
+    width: 22px;
+    height: 22px;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .cart-item .remove {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
 .nav .signup {
     background: black;
     color: white;

@@ -32,10 +32,15 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             <div class="card-back">
               <p>${p.description}</p>
-              <button ${disabled}>${buttonText}</button>
+              <button class="add-to-cart-btn" ${disabled}>${buttonText}</button>
             </div>
           </div>
         `;
+
+        card.querySelector(".add-to-cart-btn").addEventListener("click", (e) => {
+          e.stopPropagation();
+          addToCart(p);
+        });
 
         grid.appendChild(card);
       });
@@ -71,21 +76,121 @@ document.addEventListener("DOMContentLoaded", () => {
         `translateX(-${currentSlide * 100}%)`;
     }
 
-    window.nextSlide = function () {
+    window.nextSlide = () => {
       currentSlide = (currentSlide + 1) % totalSlides;
       updateSlider();
     };
 
-    window.prevSlide = function () {
+    window.prevSlide = () => {
       currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
       updateSlider();
     };
 
-    // automatikus váltás
-    setInterval(() => {
-      currentSlide = (currentSlide + 1) % totalSlides;
-      updateSlider();
-    }, 5000);
+    setInterval(window.nextSlide, 5000);
   }
+
+  /* =======================
+     KOSÁR LOGIKA
+  ======================= */
+
+  function getCart() {
+    return JSON.parse(localStorage.getItem("cart")) || [];
+  }
+
+  function saveCart(cart) {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+
+  window.addToCart = function (product) {
+    let cart = getCart();
+    const item = cart.find(i => i.id === product.id);
+
+    if (item) {
+      item.quantity++;
+    } else {
+      cart.push({
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        image: product.imageUrl,
+        quantity: 1
+      });
+    }
+
+    saveCart(cart);
+    renderCart();
+    openCart();
+  };
+
+  window.changeQuantity = function (id, delta) {
+    let cart = getCart();
+    const item = cart.find(i => i.id === id);
+
+    if (!item) return;
+
+    item.quantity += delta;
+
+    if (item.quantity <= 0) {
+      cart = cart.filter(i => i.id !== id);
+    }
+
+    saveCart(cart);
+    renderCart();
+  };
+
+  window.removeFromCart = function (id) {
+    let cart = getCart().filter(i => i.id !== id);
+    saveCart(cart);
+    renderCart();
+  };
+
+  function updateCartCounter() {
+    const count = getCart().reduce((sum, i) => sum + i.quantity, 0);
+    const counter = document.getElementById("cart-count");
+    if (counter) counter.textContent = count;
+  }
+
+  function renderCart() {
+    const cartContent = document.querySelector(".cart-content");
+    if (!cartContent) return;
+
+    const cart = getCart();
+
+    if (cart.length === 0) {
+      cartContent.innerHTML = "<p>A kosár jelenleg üres.</p>";
+      updateCartCounter();
+      return;
+    }
+
+    let total = 0;
+
+    cartContent.innerHTML = cart.map(item => {
+      total += item.price * item.quantity;
+
+      return `
+        <div class="cart-item">
+          <img src="${item.image}">
+          <div class="cart-info">
+            <strong>${item.name}</strong>
+            <div class="qty">
+              <button onclick="changeQuantity(${item.id}, -1)">−</button>
+              <span>${item.quantity}</span>
+              <button onclick="changeQuantity(${item.id}, 1)">+</button>
+            </div>
+          </div>
+          <button class="remove" onclick="removeFromCart(${item.id})">✕</button>
+        </div>
+      `;
+    }).join("");
+
+    cartContent.innerHTML += `
+      <hr>
+      <strong>Összesen: ${total} Ft</strong>
+    `;
+
+    updateCartCounter();
+  }
+
+  renderCart();
 
 });
