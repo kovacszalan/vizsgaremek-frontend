@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MézBolt</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/products.css">
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">
+        <a href="index.html">
+            <img src="images/logo.png" alt="MézBolt logó">
+        </a>
+    </div>
+
+    <nav class="nav">
+        <a href="termekek.html">Termékek</a>
+        <a href="#contact">Elérhetőség</a>
+        <a href="javascript:void(0)" onclick="openCart()">Kosár</a>
+        <a href="#login" class="login">Login</a>
+        <a href="#signup" class="signup">Sign up</a>
+    </nav>
+</header>
+
+<div class="filter-bar">
+        <label for="categoryFilter">Kategória:</label>
+        <select id="categoryFilter">
+            <option value="all">Összes</option>
+            <option value="akac">Akác</option>
+            <option value="napraforgo">Napraforgó</option>
+            <option value="hars">Hárs</option>
+            <option value="repce">Repce</option>
+            <option value="gesztenye">Gesztenye</option>
+            <option value="selyemfu">Selyemfű</option>
+            <option value="vegyes">Vegyes</option>
+            <option value="erdo">Erdő</option>
+
+        </select>
+    </div>
+
+<div class="products-grid">
+
+    
+    
+    
+    <!-- 1 -->
+    <div class="products-grid" data-category="akac" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+    
+            <div class="card-front">
+                <img src="images/akacmez.jpg">
+                <h3>Akácméz</h3>
+                <span class="price">4800 Ft</span>
+            </div>
+    
+            <div class="card-back">
+                <p>Világos színű, enyhén édes akácméz.</p>
+                <button>Kosárba</button>
+            </div>
+    
+        </div>
+    </div>
+    
+
+    <!-- 2 -->
+    <div class="products-grid" data-category="napraforgo" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+    
+            <div class="card-front">
+                <img src="images/akacmez.png">
+                <h3>Napraforgóméz</h3>
+                <span class="price">3400 Ft</span>
+            </div>
+    
+            <div class="card-back">
+                <p>Világos színű, enyhén édes akácméz.</p>
+                <button>Kosárba</button>
+            </div>
+    
+        </div>
+    </div>
+    
+
+    <!-- 3 -->
+    <div class="products-grid" data-category="hars" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+    
+            <div class="card-front">
+                <img src="images/harsmez.png">
+                <h3>Hársméz</h3>
+                <span class="price">4100 Ft</span>
+            </div>
+    
+            <div class="card-back">
+                <p>Világos színű, enyhén édes akácméz.</p>
+                <button>Kosárba</button>
+            </div>
+    
+        </div>
+    </div>
+    
+
+    <!-- 4 -->
+    <div class="products-grid" data-category="repce" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+    
+            <div class="card-front">
+                <img src="images/repcemez.png">
+                <h3>Repceméz</h3>
+                <span class="price">3000 Ft</span>
+            </div>
+    
+            <div class="card-back">
+                <p>Világos színű, enyhén édes akácméz.</p>
+                <button>Kosárba</button>
+            </div>
+    
+        </div>
+    </div>
+    
+
+    <!-- 5 -->
+    <div class="products-grid" data-category="gesztenye" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+    
+            <div class="card-front">
+                <img src="images/gesztenyemez.png">
+                <h3>Gesztenyeméz</h3>
+                <span class="price">4900 Ft</span>
+            </div>
+    
+            <div class="card-back">
+                <p>Világos színű, enyhén édes akácméz.</p>
+                <button>Kosárba</button>
+            </div>
+    
+        </div>
+    </div>
+    
+
+    <!-- 6 -->
+    <div class="products-grid" data-category="selyemfu" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+    
+            <div class="card-front">
+                <img src="images/selyemfumez.png">
+                <h3>Selyemfűméz</h3>
+                <span class="price">5200 Ft</span>
+            </div>
+    
+            <div class="card-back">
+                <p>Világos színű, enyhén édes akácméz.</p>
+                <button>Kosárba</button>
+            </div>
+    
+        </div>
+    </div>
+    
+
+    <!-- 7 -->
+    <div class="products-grid" data-category="vegyes" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+    
+            <div class="card-front">
+                <img src="images/vegyesmez.png">
+                <h3>Vegyes Virágméz</h3>
+                <span class="price">3300 Ft</span>
+            </div>
+    
+            <div class="card-back">
+                <p>Világos színű, enyhén édes akácméz.</p>
+                <button>Kosárba</button>
+            </div>
+    
+        </div>
+    </div>
+    
+
+    <!-- 8 -->
+    <div class="products-grid" data-category="erdo" onclick="this.classList.toggle('flipped')">
+        <div class="card-inner">
+    
+            <div class="card-front">
+                <img src="images/erdomez.png">
+                <h3>Erdőméz</h3>
+                <span class="price">4500 Ft</span>
+            </div>
+    
+            <div class="card-back">
+                <p>Világos színű, enyhén édes akácméz.</p>
+                <button>Kosárba</button>
+            </div>
+    
+        </div>
+    </div>
+    
+
+</div>
+
+<footer class="footer">
+    <p>© 2026 MézBolt</p>
+</footer>
+
+<!-- KOSÁR OVERLAY -->
+<div id="cart-overlay" class="cart-overlay" onclick="closeCart()"></div>
+
+<!-- KOSÁR PANEL -->
+<div id="cart-panel" class="cart-panel">
+    <div class="cart-header">
+        <h2>Kosár</h2>
+        <button class="close-btn" onclick="closeCart()">✕</button>
+    </div>
+
+    <div class="cart-content">
+        <p>A kosár jelenleg üres.</p>
+        <!-- ide jönnek majd a termékek -->
+    </div>
+
+    <div class="cart-footer">
+        <button class="checkout-btn">Tovább a fizetéshez</button>
+    </div>
+</div>
+
+
+</body>
+</html>

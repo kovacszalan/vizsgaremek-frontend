@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MézBolt</title>
+   
+    <link rel="stylesheet" href="css/base.css">
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">
+        <img href="index.html" src="images/logo.png" alt="MézBolt logó">
+    </div>
+
+    <nav class="nav">
+        <a href="termekek.html">Termékek</a>
+        <a href="#contact">Elérhetőség</a>
+        <a href="javascript:void(0)" onclick="openCart()">Kosár</a>
+        <a href="#login" class="login">Login</a>
+        <a href="#signup" class="signup">Sign up</a>
+    </nav>
+</header>
+
+<section class="slider">
+    <div class="slides">
+
+        <div class="slide active">
+            <img src="images/slider1.png" alt="Méz 1">
+        </div>
+
+        <div class="slide">
+            <img src="images/slider2.png" alt="Méz 2">
+        </div>
+
+        <div class="slide">
+            <img src="images/slider3.png" alt="Méz 3">
+        </div>
+
+    </div>
+
+    <button class="slider-btn prev" onclick="prevSlide()">‹</button>
+    <button class="slider-btn next" onclick="nextSlide()">›</button>
+</section>
+
+
+<section class="hero">
+    <h1>Természetes mézek közvetlenül a termelőtől</h1>
+    <p>Minőségi magyar mézek online rendelése</p>
+</section>
+
+
+<footer class="footer">
+    <p>© 2026 MézBolt</p>
+</footer>
+
+<!-- KOSÁR OVERLAY -->
+<div id="cart-overlay" class="cart-overlay" onclick="closeCart()"></div>
+
+<!-- KOSÁR PANEL -->
+<div id="cart-panel" class="cart-panel">
+    <div class="cart-header">
+        <h2>Kosár</h2>
+        <button class="close-btn" onclick="closeCart()">✕</button>
+    </div>
+
+    <div class="cart-content">
+        <p>A kosár jelenleg üres.</p>
+        <!-- ide jönnek majd a termékek -->
+    </div>
+
+    <div class="cart-footer">
+        <button class="checkout-btn">Tovább a fizetéshez</button>
+    </div>
+</div>
+
+
+</body>
+</html>

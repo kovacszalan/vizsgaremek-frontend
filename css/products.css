@@ -1,0 +1,130 @@
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px 40px;
+}
+
+/* FLIP CARD ALAP */
+.product-card {
+    perspective: 1000px;
+    width: 100%;
+    height: 320px;
+}
+
+/* BELSŐ FORGATHATÓ RÉSZ */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    transform-style: preserve-3d;
+}
+
+/* DESKTOP – hover */
+.product-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* MOBIL – kattintás */
+.product-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* KÉT OLDAL */
+.card-front,
+.card-back {
+    position: absolute;
+    inset: 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    backface-visibility: hidden;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ELŐLAP */
+.card-front img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card-front h3 {
+    margin: 10px 0 5px;
+}
+
+/* HÁTLAP */
+.card-back {
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+.card-back p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.card-back button {
+    padding: 10px;
+    width: 100%;
+    background: #f4b400;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filter-bar {
+    max-width: 1200px;
+    margin: 25px auto 25px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-bar label {
+    font-weight: bold;
+}
+
+.filter-bar select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+    .filter-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .filter-bar select {
+        width: 100%;
+    }
+}
+
+
+/* MOBIL FINOMÍTÁS */
+@media (max-width: 768px) {
+    .product-card {
+        height: 300px;
+    }
+
+    .card-front img {
+        height: 140px;
+    }
+}

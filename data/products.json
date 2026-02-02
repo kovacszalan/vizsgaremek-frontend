@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Akácméz",
+        "category": "akac",
+        "description": "Az akácméz világos színű, tiszta, enyhén virágos ízvilágú mézfajta. Magas fruktóztartalma miatt lassan kristályosodik, ezért hosszú ideig folyékony marad. Könnyen emészthető, gyomorkímélő tulajdonságokkal rendelkezik. Édesítőereje nagyobb az átlagos mézeknél, ezért kevesebb is elegendő belőle. Kifejezetten ajánlott teákhoz, süteményekhez és diabetikus étrendek kiegészítésére.",
+        "price": 4800,
+        "stock": 100,
+        "imageUrl": "images/akacmez.png"
+    },
+    {
+        "id": 2,
+        "name": "Napraforgóméz",
+        "category": "napraforgo",
+        "description": "A napraforgóméz aranysárga színű, intenzív, jellegzetesen mézes ízvilágú mézfajta. Magas glükóztartalma miatt gyorsan kristályosodik, gyakran finomszemcsés, krémes állagúvá válik. Energiatartalma jelentős, ezért kiváló gyors energiaforrás. Ásványi anyagokban és antioxidánsokban gazdagabb a világos mézeknél. Mindennapi fogyasztásra, sütéshez és főzéshez egyaránt jól használható.",
+        "price": 3400,
+        "stock": 100,
+        "imageUrl": "images/napraforgomez.png"
+    },
+    {
+        "id": 3,
+        "name": "Hársméz",
+        "category": "hars",
+        "description": "A hársméz markáns illatú, enyhén mentolos, karakteres ízű méz. Színe világos borostyán, kristályosodása közepes ütemű. Nyugtató hatása miatt különösen ajánlott esti fogyasztásra. Meghűléses betegségek esetén hagyományosan alkalmazott természetes szer. Teákhoz és gyógynövényes italokhoz kifejezetten jól illik.",
+        "price": 4100,
+        "stock": 100,
+        "imageUrl": "images/harsmez.png"
+    },
+    {
+        "id": 4,
+        "name": "Repceméz",
+        "category": "repce",
+        "description": "A repceméz világos, szinte fehér színű mézfajta. Nagyon gyorsan kristályosodik, krémes állagot vesz fel. Íze enyhe, kevésbé domináns, ezért sokan kedvelik. Magas glükóztartalma miatt gyors energiaforrás. Kiváló választás kenyérre kenve és krémméz formájában.",
+        "price": 3000,
+        "stock": 100,
+        "imageUrl": "images/repcemez.png"
+    },
+    {
+        "id": 5,
+        "name": "Gesztenyeméz",
+        "category": "gesztenye",
+        "description": "A gesztenyeméz sötét színű, karakteres, enyhén kesernyés ízvilágú mézfajta. Illata erőteljes, ásványi anyag-tartalma kiemelkedően magas. Lassan kristályosodik, gyakran hosszú ideig folyékony marad. Erős antioxidáns és antibakteriális tulajdonságokkal rendelkezik. Kifejezetten ajánlott sportolóknak és fokozott fizikai terhelés esetén.",
+        "price": 4900,
+        "stock": 100,
+        "imageUrl": "images/gesztenyemez.png"
+    },
+    {
+        "id": 6,
+        "name": "Selyemfűméz",
+        "category": "selyemfu",
+        "description": "A selyemfűméz világos színű, enyhén zöldes árnyalatú méz. Íze különlegesen lágy, enyhén vaníliás jegyekkel. Kristályosodása lassú, sokáig folyékony állapotú marad. Gyomorkímélő hatású, ezért érzékeny emésztésűek számára is ajánlott. Prémium minőségű magyar különlegességnek számít.",
+        "price": 5200,
+        "stock": 100,
+        "imageUrl": "images/selyemfumez.png"
+    },
+    {
+        "id": 7,
+        "name": "Vegyes virágméz",
+        "category": "vegyes",
+        "description": "A vegyes virágméz különböző vad- és kultúrnövények nektárjából készül. Íze gazdag, változatos, évjáratonként eltérő karaktert mutathat. Színe az aranysárgától a borostyánig terjedhet. Ásványianyag-tartalma magasabb az akácméznél. Mindennapi fogyasztásra kiváló, általános immunerősítő hatással bír.",
+        "price": 3300,
+        "stock": 100,
+        "imageUrl": "images/vegyesmez.png"
+    },
+    {
+        "id": 8,
+        "name": "Erdőméz",
+        "category": "erdo",
+        "description": "Az erdőméz nem virágnektárból, hanem mézharmatból készül. Sötét színű, ásványi anyagokban gazdag mézfajta. Íze erőteljes, kevésbé édes, enyhén karamellás jegyekkel. Antibakteriális hatása kiemelkedő. Sportolók és legyengült szervezet számára különösen ajánlott.",
+        "price": 4500,
+        "stock": 100,
+        "imageUrl": "images/erdomez.png"
+    }
+  ]
