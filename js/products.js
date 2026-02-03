@@ -193,4 +193,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderCart();
 
+  const loginBtn = document.querySelector(".login");
+const modal = document.getElementById("login-modal");
+const overlay = document.getElementById("login-modal-overlay");
+const closeBtn = document.getElementById("login-close");
+
+if (loginBtn) {
+    loginBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        modal.classList.add("show");
+        overlay.classList.add("show");
+    });
+}
+
+function closeLoginModal() {
+    modal.classList.remove("show");
+    overlay.classList.remove("show");
+}
+
+if (closeBtn) closeBtn.addEventListener("click", closeLoginModal);
+if (overlay) overlay.addEventListener("click", closeLoginModal);
+
+const signupBtn = document.querySelector(".signup");
+const signupModal = document.getElementById("signup-modal");
+const signupOverlay = document.getElementById("signup-modal-overlay");
+const signupClose = document.getElementById("signup-close");
+
+if (signupBtn) {
+    signupBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        signupModal.classList.add("show");
+        signupOverlay.classList.add("show");
+    });
+}
+
+function closeSignupModal() {
+    signupModal.classList.remove("show");
+    signupOverlay.classList.remove("show");
+}
+
+if (signupClose) signupClose.addEventListener("click", closeSignupModal);
+if (signupOverlay) signupOverlay.addEventListener("click", closeSignupModal);
+
+
 });

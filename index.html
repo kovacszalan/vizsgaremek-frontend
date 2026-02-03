@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MézBolt</title>
-   
     <link rel="stylesheet" href="css/base.css">
     <script src="js/products.js"></script>
     <script src="js/cart.js"></script>
@@ -17,13 +16,13 @@
     </div>
 
     <nav class="nav">
-        <a href="termekek.html">Termékek</a>
-        <a href="#contact">Elérhetőség</a>
-        <a href="javascript:void(0)" onclick="openCart()">
+        <a href="termekek.html" class="products">Termékek</a>
+        <a href="#contact" class="contact">Elérhetőség</a>
+        <a href="javascript:void(0)" class="cart" onclick="openCart()">
             Kosár <span id="cart-count">0</span>
           </a>          
-        <a href="#login" class="login">Login</a>
-        <a href="#signup" class="signup">Sign up</a>
+        <a href="#" class="login">Login</a>
+        <a href="#" class="signup">Sign up</a>
     </nav>
 </header>
 
@@ -78,6 +77,53 @@
         <button class="checkout-btn">Tovább a fizetéshez</button>
     </div>
 </div>
+
+<!-- LOGIN MODAL OVERLAY -->
+<div id="login-modal-overlay" class="modal-overlay"></div>
+
+<!-- LOGIN MODAL -->
+<div id="login-modal" class="modal">
+    <button class="modal-close" id="login-close">✕</button>
+
+    <h2>Bejelentkezés</h2>
+
+    <form class="login-form">
+        <label>Email</label>
+        <input type="email" placeholder="email@example.com" required>
+
+        <label>Jelszó</label>
+        <input type="password" placeholder="••••••••" required>
+
+        <button type="submit" class="login-btn">Belépés</button>
+    </form>
+</div>
+
+<!-- SIGN UP MODAL OVERLAY -->
+<div id="signup-modal-overlay" class="modal-overlay"></div>
+
+<!-- SIGN UP MODAL -->
+<div id="signup-modal" class="modal">
+    <button class="modal-close" id="signup-close">✕</button>
+
+    <h2>Regisztráció</h2>
+
+    <form class="login-form">
+        <label>Név</label>
+        <input type="text" placeholder="Teljes név" required>
+
+        <label>Email</label>
+        <input type="email" placeholder="email@example.com" required>
+
+        <label>Jelszó</label>
+        <input type="password" placeholder="••••••••" required>
+
+        <label>Jelszó újra</label>
+        <input type="password" placeholder="••••••••" required>
+
+        <button type="submit" class="login-btn">Fiók létrehozása</button>
+    </form>
+</div>
+
 
 
 </body>
