@@ -36,77 +36,24 @@ body {
     text-decoration: none;
     color: black;
     font-weight: bold;
+    padding: 15px;
+    transition: transform 0.3s ease, color 0.3s ease, letter-spacing 0.3s ease;
+    
+}
+.nav a:hover{
+    color: #fff;  
+    transform: scale(1.1);
+    
 }
 
-.products,.contact {
-    font-size: 18px;
-    color: #e1e1e1;
-    font-family: inherit;
-    font-weight: 800;
-    cursor: pointer;
-    position: relative;
-    border: none;
-    background: none;
-    text-transform: uppercase;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: color;
-  }
-  
-  .products:focus,
-  .products:hover {
-    color: #fff;
-  }
 
-  .contact:focus,
-  .contact:hover {
-    color: #fff;
-  }
-  
-  .products:focus:after,
-  .products:hover:after {
-    width: 100%;
-    left: 0%;
-  }
 
-  .contact:focus:after,
-  .contact:hover:after {
-    width: 100%;
-    left: 0%;
-  }
-  
-  .products:after {
-    content: "";
-    pointer-events: none;
-    bottom: -2px;
-    left: 50%;
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background-color: #fff;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: width, left;
-  }
-
-  .contact:after {
-    content: "";
-    pointer-events: none;
-    bottom: -2px;
-    left: 50%;
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background-color: #fff;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: width, left;
-  }
 
 .cart{
-  font-size: 20px;
+  font-size: 18px;
     text-decoration: none;
     position: relative;
+    padding: 15px;
 }
 
 #cart-count {
@@ -161,34 +108,10 @@ body {
     cursor: pointer;
   }
   
-.nav .signup {
-    border-radius: 5px;
-    
-}
 
 
-.signup {
-    font: inherit;
-    background-color: #f0f0f0;
-    border: 0;
-    color: #242424;
-    border-radius: 0.5em;
-    font-size: 1.35rem;
-    padding: 0.375em 1em;
-    font-weight: 600;
-    text-shadow: 0 0.0625em 0 #fff;
-    box-shadow: inset 0 0.0625em 0 0 #f4f4f4, 0 0.0625em 0 0 #efefef,
-      0 0.125em 0 0 #ececec, 0 0.25em 0 0 #e0e0e0, 0 0.3125em 0 0 #dedede,
-      0 0.375em 0 0 #dcdcdc, 0 0.425em 0 0 #cacaca, 0 0.425em 0.5em 0 #cecece;
-    transition: 0.15s ease;
-    cursor: pointer;
-  }
-  .signup:active {
-    translate: 0 0.225em;
-    box-shadow: inset 0 0.03em 0 0 #f4f4f4, 0 0.03em 0 0 #efefef,
-      0 0.0625em 0 0 #ececec, 0 0.125em 0 0 #e0e0e0, 0 0.125em 0 0 #dedede,
-      0 0.2em 0 0 #dcdcdc, 0 0.225em 0 0 #cacaca, 0 0.225em 0.375em 0 #cecece;
-  }
+
+
   
 
 .nav .login{
@@ -196,29 +119,89 @@ body {
     border-radius: 5px;
 }
 
-
-.login {
-    font: inherit;
-    background-color: #f0f0f0;
-    border: 0;
-    color: #242424;
-    border-radius: 0.5em;
-    font-size: 1.35rem;
-    padding: 0.375em 1em;
-    font-weight: 600;
-    text-shadow: 0 0.0625em 0 #fff;
-    box-shadow: inset 0 0.0625em 0 0 #f4f4f4, 0 0.0625em 0 0 #efefef,
-      0 0.125em 0 0 #ececec, 0 0.25em 0 0 #e0e0e0, 0 0.3125em 0 0 #dedede,
-      0 0.375em 0 0 #dcdcdc, 0 0.425em 0 0 #cacaca, 0 0.425em 0.5em 0 #cecece;
-    transition: 0.15s ease;
+.login{
+  font-size: 18px;
+    color: #e1e1e1;
+    font-family: inherit;
+    font-weight: 800;
     cursor: pointer;
-  }
-  .login:active {
-    translate: 0 0.225em;
-    box-shadow: inset 0 0.03em 0 0 #f4f4f4, 0 0.03em 0 0 #efefef,
-      0 0.0625em 0 0 #ececec, 0 0.125em 0 0 #e0e0e0, 0 0.125em 0 0 #dedede,
-      0 0.2em 0 0 #dcdcdc, 0 0.225em 0 0 #cacaca, 0 0.225em 0.375em 0 #cecece;
-  }
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+    padding: 15px;
+}
+.login:focus,
+.login:hover{
+  color: #fff;
+}
+.login:focus:after,
+.login:hover::after{
+width: 100%;
+left: 0%;
+}
+.login::after{
+  content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
+
+.nav .signup {
+  border-radius: 5px;
+  
+}
+
+.signup{
+  font-size: 18px;
+    color: #e1e1e1;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+    padding: 15px;
+}
+.signup:focus,
+.signup:hover{
+  color: #fff;
+}
+.signup:focus:after,
+.signup:hover::after{
+width: 100%;
+left: 0%;
+}
+.signup:after{
+  content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
+
   
 
 /* OVERLAY */
@@ -319,19 +302,8 @@ button:hover:after {
   left: 0%;
 }
 
-button:after {
-  content: "";
-  pointer-events: none;
-  bottom: -2px;
-  left: 50%;
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background-color: #fff;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 400ms;
-  transition-property: width, left;
-}
+
+
 .slider {
     position: relative;
     width: 100%;
@@ -360,31 +332,110 @@ button:after {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
+    background: none;
     color: white;
-    border: none;
     font-size: 2rem;
     padding: 5px 12px;
     cursor: pointer;
-    border-radius: 50%;
 }
 
-.slider-btn.prev { left: 15px; }
-.slider-btn.next { right: 15px; }
+.slider-btn.prev { left: 10px; color: white; }
+.slider-btn.next { right: 10px; color: white; }
 
-/* MOBIL */
-@media (max-width: 768px) {
-    .slide img {
-        height: 250px;
-    }
+
+
+
+.newsletter {
+    background: linear-gradient(135deg, #f4b400, #f7c948);
+    padding: 70px 20px;
+    text-align: center;
 }
+
+.newsletter-content {
+    max-width: 600px;
+    margin: auto;
+}
+
+.newsletter input {
+    padding: 14px;
+    width: 65%;
+    border-radius: 30px;
+    border: none;
+    margin-right: 10px;
+}
+
+.newsletter button {
+    padding: 14px 25px;
+    border-radius: 30px;
+    border: none;
+    background: #2b2b2b;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.newsletter button:hover {
+    background: black;
+}
+
+
 
 
 .footer {
+    background: #2b2b2b;
+    color: #e1e1e1;
+    margin-top: -50px;
+    padding-top: 120px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    padding: 0 20px 40px;
+}
+
+.footer-col h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+}
+
+.footer-col a {
+    display: block;
+    color: #e1e1e1;
+    text-decoration: none;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+.footer-col a:hover {
+    color: #f4b400;
+}
+
+.footer-col p {
+    margin: 6px 0;
+}
+
+/* LOGO */
+.footer-logo img {
+    max-width: 140px;
+}
+
+/* BOTTOM SÁV */
+.footer-bottom {
+    border-top: 1px solid #444;
     text-align: center;
     padding: 20px;
-    background-color: #eee;
+    font-size: 14px;
+    color: #aaa;
 }
+
+
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
@@ -409,6 +460,13 @@ button:after {
         display: flex;
         justify-content: center;
         margin-bottom: 10px;
+    }
+}
+
+/* Slider Mobil */
+@media (max-width: 768px) {
+    .slide img {
+        height: 250px;
     }
 }
 
@@ -490,5 +548,16 @@ button:after {
 @media (max-width: 480px) {
     .cart-panel {
         width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-logo img {
+        margin: auto;
     }
 }
